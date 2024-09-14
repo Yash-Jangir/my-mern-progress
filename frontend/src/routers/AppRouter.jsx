@@ -8,6 +8,7 @@ import RandomPasswordGenerator from "../pages/BasicApps/RandomPasswordGenerator"
 import CurrencyConvertorApp from "../pages/BasicApps/CurrencyConvertorApp";
 import TickTacToe from "../pages/BasicApps/TickTacToe";
 import AdvanceTodo from "../pages/BasicApps/AdvanceTodo";
+import ContactMe from "../pages/ContactMe";
 
 
 const AppRouter = createBrowserRouter(
@@ -15,6 +16,7 @@ const AppRouter = createBrowserRouter(
         <Route path="/" element={<AppLayout />} >
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/contact-me" element={<ContactMe />} />
             <Route path="/basic-apps" >
                 <Route path="background-changer" element={<BackgroundChanger />} />
                 <Route path="random-password-generator" element={<RandomPasswordGenerator />} />

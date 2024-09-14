@@ -12,9 +12,9 @@ const {
 const dbUrl = () => {
     let url = `${DB_PROTOCOL}://`
     if (DB_USERNAME && DB_PASSWORD) {
-        url += `${DB_USERNAME}:${DB_PASSWORD}`
+        url += `${DB_USERNAME}:${DB_PASSWORD}@`
     }
-    url += `@${DB_HOST}`
+    url += `${DB_HOST}`
     if (DB_PORT) {
         url += `:${DB_PORT}`
     }

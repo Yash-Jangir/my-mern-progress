@@ -221,7 +221,7 @@ const updateAvatar = asyncExceptionWrapper(
         const user = req.user
         const { filename } = req?.file || {}
 
-        const oldFIle = storagePath(`${user._id}/${user.avatar}`)
+        const oldFIle = storagePath(`uploads/${user._id}/${user.avatar}`)
         if (user.avatar && fs.existsSync(oldFIle)) {
             fs.unlinkSync(oldFIle)
         }

@@ -6,7 +6,7 @@ import { storagePath } from "../utils/path.js";
 const index = asyncExceptionWrapper(
     async (req, res, next) => {
         const { userId, filename } = req.params
-        const path = storagePath(`${userId}/${filename}`)
+        const path = storagePath(`uploads/${userId}/${filename}`)
 
         if (!fs.existsSync(path)) {
             return next({

@@ -39,11 +39,11 @@ app.get("/media/:userId/:filename", mediaController.index)
 app.use(errorMiddleware)
 
 
-
+// app start
 initDBConnection()
     .then(() => {
         app.listen(config.app.port, () => {
             console.log(`server is running on port ${config.app.port}\n${config.app.url}`)
         })
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err.message))

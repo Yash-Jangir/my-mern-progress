@@ -32,29 +32,9 @@ export default function SideBar() {
                 icon: <i className="fa-solid fa-user" style={{ fontSize: "1.2rem" }} />
             },
             {
-                title: "BG-Changer",
-                link: "/basic-apps/background-changer",
-                icon: <i className="fa-solid fa-palette" style={{ fontSize: "1.2rem" }} />
-            },
-            {
-                title: "Password Gen",
-                link: "/basic-apps/random-password-generator",
-                icon: <i className="fa-solid fa-key" style={{ fontSize: "1.2rem" }} />
-            },
-            {
-                title: "Currency Conv",
-                link: "/basic-apps/currency-converter",
-                icon: <i className="fa-solid fa-right-left" style={{ fontSize: "1.2rem" }} />
-            },
-            {
-                title: "Tick Tac Toe",
-                link: "/redux/tick-tac-toe",
-                icon: <i className="fa-solid fa-gamepad" style={{ fontSize: "1.2rem" }} />
-            },
-            {
-                title: "Advance Todo",
-                link: "/redux/todo-app",
-                icon: <i className="fa-solid fa-table-list" style={{ fontSize: "1.2rem" }} />
+                title: "Contact Me",
+                link: "/contact-me",
+                icon: <i className="fa-solid fa-envelope" style={{ fontSize: "1.2rem" }} />
             },
         ],
         [

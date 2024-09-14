@@ -178,7 +178,8 @@ section>.content {
   position: relative;
 }
 
-.input-group input.invalid {
+.input-group input.invalid,
+.input-group textarea.invalid {
   box-shadow: 0 0 1px 1px var(--cancel);
 }
 
@@ -326,8 +327,14 @@ button.cancel {
   background: transparent;
 }
 
-#home>div a span {
+
+#home>div a span:not(.task-icon) {
   display: none;
+}
+
+#home>div a .task-icon {
+  margin-right: 15px;
+  font-size: 20px;
 }
 
 #home>div a:hover {
@@ -450,6 +457,43 @@ button.cancel {
 .edit-form .thumbnail:hover span.remove {
   display: block;
 }
+
+
+
+/* Mail */
+#mail h2 {
+  letter-spacing: 3px;
+  padding-left: 120px;
+}
+
+#mail h2,
+#mail .details {
+  width: 500px;
+  margin: 30px auto 15px;
+}
+
+#mail .details .input-group {
+  margin-top: 20px;
+}
+
+#mail .details .button-group {
+  margin-top: 10px;
+}
+
+#mail .details .input-group,
+#mail .details .button-group {
+  flex-wrap: nowrap;
+}
+
+#mail .details .input-group .for-textarea {
+  height: 150px;
+}
+
+#mail p.error {
+  margin-left: 120px;
+  margin-top: 6px;
+}
+
 
 
 /* background-changer */
