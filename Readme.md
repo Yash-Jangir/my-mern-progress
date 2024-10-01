@@ -48,7 +48,6 @@ npm run dev
 # Modules and Screenshots
 This section includes an overview of the modules used in the project and some screenshots demonstrating the application's functionality.
 
-## Modules and screenshots
 - **Authentication**: A basic authentication system with dedicated Login and Register pages. Users can create an account and log in securely to access personalized features.
 <div>
     <img src="./screenshots/login.png" alt="Login Screen" width="200" />
