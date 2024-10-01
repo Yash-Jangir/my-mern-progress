@@ -9,6 +9,7 @@ import CurrencyConvertorApp from "../pages/BasicApps/CurrencyConvertorApp";
 import TickTacToe from "../pages/BasicApps/TickTacToe";
 import AdvanceTodo from "../pages/BasicApps/AdvanceTodo";
 import ContactMe from "../pages/ContactMe";
+import ChatApp from "../pages/BasicApps/ChatApp";
 
 
 const AppRouter = createBrowserRouter(
@@ -26,6 +27,7 @@ const AppRouter = createBrowserRouter(
             <Route path="/redux" >
                 <Route path="tick-tac-toe" element={<TickTacToe />} />
                 <Route path="todo-app" element={<AdvanceTodo />} />
+                <Route path="chat-app" element={<ChatApp />} />
             </Route>
 
             <Route path="*" element={<NotFound404 />} />

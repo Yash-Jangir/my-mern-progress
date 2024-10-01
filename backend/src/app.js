@@ -1,14 +1,17 @@
-import "dotenv/config"
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 
 // custom import
-import config from "./configs/index.js"
+import corsConfig from "./configs/cors.js"
 import routes from "./routes/index.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 import { initDBConnection } from "./configs/db.js"
 import mediaController from "./controllers/media.controller.js"
+
+
+// database connection
+await initDBConnection()
 
 
 // app initialization
@@ -20,7 +23,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: corsConfig.origin,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     optionsSuccessStatus: 200,
@@ -39,11 +42,5 @@ app.get("/media/:userId/:filename", mediaController.index)
 app.use(errorMiddleware)
 
 
-// app start
-initDBConnection()
-    .then(() => {
-        app.listen(config.app.port, () => {
-            console.log(`server is running on port ${config.app.port}\n${config.app.url}`)
-        })
-    })
-    .catch(err => console.log(err.message))
+// exporting app
+export default app

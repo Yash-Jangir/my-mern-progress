@@ -325,6 +325,7 @@ button.cancel {
   box-shadow: 0 0 1px var(--text-color);
   color: var(--text-color);
   background: transparent;
+  align-items: center;
 }
 
 
@@ -858,6 +859,222 @@ button.cancel {
   white-space: nowrap;
   padding-top: 3px;
   flex-grow: 1;
+}
+
+/* Chat-App */
+#chat-app {
+  display: flex;
+  gap: 20px;
+}
+
+#chat-app .chat-section,
+#chat-app .friends-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-app .chat-section {
+  flex-grow: 10;
+}
+
+#chat-app .chat-section .heading {
+  height: 50px;
+  border-bottom: 1px solid var(--text-color-dim);
+  padding: 0 10px 15px;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+#chat-app .chat-section .heading h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+#chat-app .chat-section .heading i {
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+#chat-app .chat-section .heading .thumbnail {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 1px var(--text-color-dim);
+}
+
+#chat-app .chat-section .heading .close {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#chat-app .chat-section .heading .close i {
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#chat-app .chat-section .heading .close i:hover {
+  color: var(--cancel);
+}
+
+#chat-app .chat-section .chats,
+#chat-app .chat-section .chats .chat-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-app .chat-section .chats {
+  justify-content: space-between;
+}
+
+#chat-app .chat-section .chats .chat-box {
+  padding: 10px;
+  gap: 10px;
+  max-height: calc(100vh - 140px);
+  overflow-y: scroll;
+}
+
+#chat-app .chat-section .chats .chat-box .chat {
+  max-width: 75%;
+}
+
+#chat-app .chat-section .chats .chat-box .chat.sent {
+  align-self: flex-end;
+  text-align: right;
+}
+
+#chat-app .chat-section .chats .chat-box .chat .message {
+  padding: 10px 12px;
+  border-radius: 18px;
+  width: max-content;
+  background: linear-gradient(to top, var(--dark-dim), var(--darker));
+}
+
+#chat-app .chat-section .chats .chat-box .chat.sent .message {
+  border: none;
+  background: linear-gradient(to top, var(--primary), var(--bg-color));
+  border-bottom-right-radius: 0;
+  margin-left: auto;
+}
+
+#chat-app .chat-section .chats .chat-box .chat:not(.sent) .message {
+  border-bottom-left-radius: 0;
+}
+
+#chat-app .chat-section .chats .chat-box .chat .date-time {
+  font-size: 12px;
+  margin: 6px 0 10px;
+}
+
+#chat-app .chat-section .chats .input-area form {
+  display: flex;
+  align-items: flex-end;
+  height: 40px;
+}
+
+#chat-app .chat-section .chats .input-area input {
+  flex-grow: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#chat-app .chat-section .chats .input-area button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 42px;
+  color: var(--text-color);
+  background: linear-gradient(to top, var(--primary), var(--bg-color));
+}
+
+
+#chat-app .friends-section {
+  flex-grow: 1;
+  min-width: 380px;
+}
+
+
+#chat-app .friends-section .search-area {
+  height: 50px;
+  border-bottom: 1px solid var(--text-color-dim);
+  padding: 0 0 15px;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  position: relative;
+}
+
+#chat-app .friends-section .search-area input {
+  flex-grow: 1;
+}
+
+#chat-app .friends-section .search-area button {
+  position: absolute;
+  right: 6px;
+  border-radius: 999px;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+#chat-app .friends-section .search-area button:hover {
+  background: var(--cancel);
+  color: var(--text-color);
+}
+
+#chat-app .friends-section .friend-list {
+  position: relative;
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#chat-app .friends-section .friend-list .friend {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1px;
+}
+
+#chat-app .friends-section .friend-list .friend .badge {
+  border-radius: 99px;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bolder;
+  margin-right: 6px;
+}
+
+#chat-app .friends-section .friend-list .friend.active {
+  background: linear-gradient(to top, var(--primary), var(--save));
+  border-radius: 30px;
+}
+
+#chat-app .friends-section .friend-list .friend.clickable {
+  cursor: pointer;
+}
+
+#chat-app .friends-section .friend-list .friend .name {
+  flex-grow: 1;
+}
+
+#chat-app .friends-section .friend-list .friend .name .username {
+  font-size: 14px;
+}
+
+#chat-app .friends-section .friend-list .friend .thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 99px;
+  box-shadow: 0 0 1px var(--text-color-dim);
 }
 
 

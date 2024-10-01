@@ -5,6 +5,7 @@ import { Provider } from "react-redux"
 import { RouterProvider } from "react-router-dom"
 import AuthRouter from "./routers/AppRouter"
 import Modal from "./contexts/Modal"
+import WebSocket from "./contexts/WebSocket"
 
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
     <>
       <Toaster />
       <Auth>
-        <Provider store={store}>
-          <Modal>
-            <RouterProvider router={AuthRouter} />
-          </Modal>
-        </Provider>
+        <WebSocket>
+          <Provider store={store}>
+            <Modal>
+              <RouterProvider router={AuthRouter} />
+            </Modal>
+          </Provider>
+        </WebSocket>
       </Auth>
     </>
   )

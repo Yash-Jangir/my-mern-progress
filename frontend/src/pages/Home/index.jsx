@@ -13,7 +13,7 @@ export default function Home() {
                         Background-changing App
                     </div>
                     <span className="icon">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i className="fa-solid fa-angles-right"></i>
                     </span>
                 </Link>
                 <Link to={"/basic-apps/random-password-generator"}>
@@ -24,7 +24,7 @@ export default function Home() {
                         Random Password Generator App
                     </div>
                     <span className="icon">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i className="fa-solid fa-angles-right"></i>
                     </span>
                 </Link>
                 <Link to={"/basic-apps/currency-converter"}>
@@ -35,7 +35,7 @@ export default function Home() {
                         Currency Converter App
                     </div>
                     <span className="icon">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i className="fa-solid fa-angles-right"></i>
                     </span>
                 </Link>
             </div>
@@ -51,7 +51,7 @@ export default function Home() {
                         Tick Tac Toe Game
                     </div>
                     <span className="icon">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i className="fa-solid fa-angles-right"></i>
                     </span>
                 </Link>
                 <Link to={"/redux/todo-app"}>
@@ -62,7 +62,18 @@ export default function Home() {
                         Advance To-Do App
                     </div>
                     <span className="icon">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i className="fa-solid fa-angles-right"></i>
+                    </span>
+                </Link>
+                <Link to={"/redux/chat-app"}>
+                    <div>
+                        <span className="task-icon">
+                            <i className="fa-solid fa-comments"></i>
+                        </span>
+                        Chat App
+                    </div>
+                    <span className="icon">
+                        <i className="fa-solid fa-angles-right"></i>
                     </span>
                 </Link>
             </div>
