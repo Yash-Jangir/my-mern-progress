@@ -103,7 +103,7 @@ export default function EditAvatar() {
                             )
                         }
                     </div>
-                    <input type="file" ref={input} name="avatar" value={state.avatar} onChange={changeHandler} hidden />
+                    <input type="file" ref={input} name="avatar" accept="image/*" value={state.avatar} onChange={changeHandler} hidden />
                 </div>
                 {state.err && <p className="error">{state.err}</p>}
                 <div className="button-group">
